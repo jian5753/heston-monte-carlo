@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Simulation = new System.Windows.Forms.TabControl();
             this.priceTest2 = new System.Windows.Forms.TabPage();
             this.pricingResult = new System.Windows.Forms.GroupBox();
@@ -68,16 +68,12 @@
             this.textBox_k = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_s0 = new System.Windows.Forms.TextBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pathPlot = new System.Windows.Forms.TabPage();
             this.textBox_rho_old = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.priceTest1 = new System.Windows.Forms.TabPage();
-            this.priceResult = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.pricingButton = new System.Windows.Forms.Button();
             this.Simulation.SuspendLayout();
             this.priceTest2.SuspendLayout();
             this.pricingResult.SuspendLayout();
@@ -85,16 +81,14 @@
             this.msgGroupBox.SuspendLayout();
             this.hestonPara.SuspendLayout();
             this.optionPara.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.pathPlot.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.priceTest1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Simulation
             // 
             this.Simulation.Controls.Add(this.priceTest2);
-            this.Simulation.Controls.Add(this.tabPage1);
-            this.Simulation.Controls.Add(this.priceTest1);
+            this.Simulation.Controls.Add(this.pathPlot);
             this.Simulation.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Simulation.Location = new System.Drawing.Point(0, 0);
             this.Simulation.Name = "Simulation";
@@ -456,21 +450,21 @@
             this.textBox_s0.TabIndex = 0;
             this.textBox_s0.Text = "101.52";
             // 
-            // tabPage1
+            // pathPlot
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.LightCyan;
-            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tabPage1.Controls.Add(this.textBox_rho_old);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.richTextBox1);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.chart1);
-            this.tabPage1.Location = new System.Drawing.Point(8, 47);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1784, 743);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "volatility path";
+            this.pathPlot.BackColor = System.Drawing.Color.LightCyan;
+            this.pathPlot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pathPlot.Controls.Add(this.textBox_rho_old);
+            this.pathPlot.Controls.Add(this.label1);
+            this.pathPlot.Controls.Add(this.richTextBox1);
+            this.pathPlot.Controls.Add(this.button1);
+            this.pathPlot.Controls.Add(this.chart1);
+            this.pathPlot.Location = new System.Drawing.Point(8, 47);
+            this.pathPlot.Name = "pathPlot";
+            this.pathPlot.Padding = new System.Windows.Forms.Padding(3);
+            this.pathPlot.Size = new System.Drawing.Size(1784, 743);
+            this.pathPlot.TabIndex = 0;
+            this.pathPlot.Text = "volatility path";
             // 
             // textBox_rho_old
             // 
@@ -509,70 +503,32 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea4.AxisX.MajorGrid.Enabled = false;
-            chartArea4.AxisX2.MajorGrid.Enabled = false;
-            chartArea4.AxisY.Crossing = 1.7976931348623157E+308D;
-            chartArea4.AxisY.LabelStyle.Format = "0.00";
-            chartArea4.AxisY.LineColor = System.Drawing.Color.Transparent;
-            chartArea4.AxisY.MajorGrid.Enabled = false;
-            chartArea4.AxisY2.LabelStyle.Format = "0.00";
-            chartArea4.AxisY2.MajorGrid.Enabled = false;
-            chartArea4.AxisY2.TitleForeColor = System.Drawing.Color.White;
-            chartArea4.BackColor = System.Drawing.Color.Transparent;
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisX2.MajorGrid.Enabled = false;
+            chartArea1.AxisY.Crossing = 1.7976931348623157E+308D;
+            chartArea1.AxisY.LabelStyle.Format = "0.00";
+            chartArea1.AxisY.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.MajorGrid.Enabled = false;
+            chartArea1.AxisY2.LabelStyle.Format = "0.00";
+            chartArea1.AxisY2.MajorGrid.Enabled = false;
+            chartArea1.AxisY2.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Location = new System.Drawing.Point(430, 123);
             this.chart1.Name = "chart1";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Name = "volatility";
-            series7.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Name = "stock";
-            this.chart1.Series.Add(series7);
-            this.chart1.Series.Add(series8);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Name = "volatility";
+            series1.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Name = "stock";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(837, 401);
             this.chart1.TabIndex = 6;
             this.chart1.Text = "B";
-            // 
-            // priceTest1
-            // 
-            this.priceTest1.BackColor = System.Drawing.Color.AliceBlue;
-            this.priceTest1.Controls.Add(this.priceResult);
-            this.priceTest1.Controls.Add(this.listBox1);
-            this.priceTest1.Controls.Add(this.pricingButton);
-            this.priceTest1.Location = new System.Drawing.Point(8, 47);
-            this.priceTest1.Name = "priceTest1";
-            this.priceTest1.Padding = new System.Windows.Forms.Padding(3);
-            this.priceTest1.Size = new System.Drawing.Size(1784, 743);
-            this.priceTest1.TabIndex = 1;
-            this.priceTest1.Text = "priceTest1";
-            // 
-            // priceResult
-            // 
-            this.priceResult.Location = new System.Drawing.Point(773, 186);
-            this.priceResult.Name = "priceResult";
-            this.priceResult.Size = new System.Drawing.Size(100, 46);
-            this.priceResult.TabIndex = 2;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 32;
-            this.listBox1.Location = new System.Drawing.Point(479, 168);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 68);
-            this.listBox1.TabIndex = 1;
-            // 
-            // pricingButton
-            // 
-            this.pricingButton.Location = new System.Drawing.Point(66, 168);
-            this.pricingButton.Name = "pricingButton";
-            this.pricingButton.Size = new System.Drawing.Size(75, 42);
-            this.pricingButton.TabIndex = 0;
-            this.pricingButton.Text = "定";
-            this.pricingButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -593,27 +549,21 @@
             this.hestonPara.PerformLayout();
             this.optionPara.ResumeLayout(false);
             this.optionPara.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.pathPlot.ResumeLayout(false);
+            this.pathPlot.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.priceTest1.ResumeLayout(false);
-            this.priceTest1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.TabControl Simulation;
-        private System.Windows.Forms.TabPage priceTest1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage pathPlot;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox_rho_old;
-        private System.Windows.Forms.Button pricingButton;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox priceResult;
         private System.Windows.Forms.TabPage priceTest2;
         private System.Windows.Forms.GroupBox optionPara;
         private System.Windows.Forms.TextBox textBox_s0;
