@@ -35,106 +35,6 @@ namespace myWinApp
             InitializeComponent();
         }
 
-        VanillaCall theCall;
-
-        int trialCnt = 1; int pathCnt = 10000; int pathLen = 365;
-
-        double s0 = 101.52;
-        double k = 100.0;
-        double var0 = 0.00770547621786487;
-        double rf = 0.001521;
-        double T = 1.0;
-
-        double kappa = 2.20366282736578;
-        double theta = 0.0164951784035976;
-        double sigma = 0.33220849746904;
-        double rho = -0.277814270110106;
-        
-        double dt = 1.0 / 365.0;
-        
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            #region old code
-            /*
-            normSample test = new normSample(2, 1000);
-            test.draw();
-
-            try { rho = double.Parse(textBox_rho.Text); }
-            catch { rho = 0; }
-
-            double[] corrData = new double[4] { 1, rho, rho, 1 };
-            Matrix testCorr = new Matrix(corrData, 2, 2);
-
-            double[] var = new double[2] { 1, 1 };
-            Matrix testCov = Matrix.corrToCov(testCorr, var);
-
-            test.inverseCholesky();
-
-            Matrix upTri = testCov.choleskyDecomp();
-            Matrix dotted = Matrix.transpose(upTri) * test.data;
-
-            double testMean = Matrix.sampleMean(dotted.getRow(0));
-            double testCov2 = Matrix.sampleCov(dotted.getRow(0), dotted.getRow(1));
-            Matrix testCovMtrx = Matrix.sampleCovMtrx(dotted);
-            richTextBox1.Text = testCovMtrx.ToString();
-
-            
-
-            hestonSVpaths t1 = new hestonSVpaths(ref dotted, s0, v0, kappa, theta, sigma, rf, dt);
-
-            Simulation_singleTrial t2 = new Simulation_singleTrial(
-                5, 1000, s0, v0, kappa, theta, sigma, rho, rf, dt
-            );
-
-            Simulation t3 = new Simulation(
-                5, 5, 1000, s0, v0, kappa, theta, sigma, rho, rf, dt
-                );
-            t1.drawVpath(chart1.Series["volatility"]);
-            //t1.drawSpath(chart1.Series["stock"]);
-            //t2.drawSingleSpath(chart1.Series["stock"], 2);
-            t3[2, 3].drawSpath(chart1.Series["stock"]);
-            //chart1.ChartAreas[0].AxisY.Minimum = t1.getSpath().Min() * 0.9;
-            chart1.ChartAreas[0].AxisY2.Minimum = t1.getVpath().Min() * 0.9;
-            */
-            #endregion
-            
-            Random rv = new Random(1234);
-            
-
-            try { rho = double.Parse(textBox_rho_old.Text); }
-            catch { rho = 0; }
-            rho = -0.277814270110106;
-
-            double[,] corrData =  { { 1, rho } , { rho, 1 }  };
-            Mtrx testCorr = new Mtrx(2, 2, ref corrData);
-
-            Stopwatch SW = new Stopwatch();
-            SW.Start();
-
-            int pathCnt = 10000;
-            double[] StArr = new double[pathCnt];
-            for(int i = 0; i < pathCnt; i++)
-            {
-                Zmtrx test = new Zmtrx(2, 365, rv);
-                Mtrx upTri = testCorr.choleskyDecomp();
-                Mtrx dotted = upTri.T().dot(test);
-
-                SVpath testPath = new SVpath(ref dotted, s0, var0, kappa, theta, sigma, rf, dt);
-                StArr[i] = testPath.getSt();
-            }
-            SW.Stop();
-            double timeConsumption = SW.ElapsedMilliseconds;
-        }
-
-        private void pricingButton_Click(object sender, EventArgs e)
-        {
-            /*
-            Call testCall = new Call(trialCnt, pathCnt, pathLen, s0, v0, k,
-                kappa, theta, sigma, rho, rf, 1);
-            testCall.sim();
-            priceResult.Text = testCall.getPrice().ToString("F4");*/
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             #region default parameters;
@@ -176,13 +76,8 @@ namespace myWinApp
             MonteCarloSimulation_hestonModel simForPut =
                 new MonteCarloSimulation_hestonModel(testPut, rho, kappa, theta, sigma, 365 * T);
 
-            //double[] sPath = testModel.drawSPath(new Random(1234));
-
             Stopwatch SW = new Stopwatch();
             SW.Start();
-
-            //double[] stArr = simForCall.drawSt(50000, new Random(1234));
-
             Random rv;
             if (seed == 0) { rv = new Random(); }
             else { rv = new Random(seed); };

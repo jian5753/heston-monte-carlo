@@ -71,10 +71,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="hestonSVpaths.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="simulations.cs" />
     <Compile Include="simulator.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="vanilla.cs" />

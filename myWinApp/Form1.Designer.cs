@@ -505,7 +505,6 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "抽";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // chart1
             // 
@@ -574,7 +573,6 @@
             this.pricingButton.TabIndex = 0;
             this.pricingButton.Text = "定";
             this.pricingButton.UseVisualStyleBackColor = true;
-            this.pricingButton.Click += new System.EventHandler(this.pricingButton_Click);
             // 
             // Form1
             // 
