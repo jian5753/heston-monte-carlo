@@ -1,0 +1,8 @@
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\ConsoleApplication1\bin\Debug\FinNRCSLib.dll
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\ConsoleApplication1\bin\Debug\FinNRCSLib.pdb
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

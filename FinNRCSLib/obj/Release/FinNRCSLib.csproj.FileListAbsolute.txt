@@ -1,0 +1,10 @@
+C:\projects\myExercise\FinNRCS\FinNRCSLib\bin\Release\FinNRCSLib.dll
+C:\projects\myExercise\FinNRCS\FinNRCSLib\bin\Release\FinNRCSLib.pdb
+C:\projects\myExercise\FinNRCS\FinNRCSLib\obj\Release\FinNRCSLib.csprojResolveAssemblyReference.cache
+C:\projects\myExercise\FinNRCS\FinNRCSLib\obj\Release\FinNRCSLib.dll
+C:\projects\myExercise\FinNRCS\FinNRCSLib\obj\Release\FinNRCSLib.pdb
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\FinNRCSLib\bin\Release\FinNRCSLib.dll
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\FinNRCSLib\bin\Release\FinNRCSLib.pdb
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\FinNRCSLib\obj\Release\FinNRCSLib.csprojResolveAssemblyReference.cache
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\FinNRCSLib\obj\Release\FinNRCSLib.dll
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\FinNRCSLib\obj\Release\FinNRCSLib.pdb
