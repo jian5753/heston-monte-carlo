@@ -56,6 +56,40 @@ namespace myWinApp
 
         }
 
+        public double[] drawVPath(Random rv)
+        {
+            double[,] corrData = { { 1, rho }, { rho, 1 } };
+            Mtrx testCorr = new Mtrx(2, 2, ref corrData);
+
+            Zmtrx test = new Zmtrx(2, 365, rv);
+            Mtrx upTri = testCorr.choleskyDecomp();
+            Mtrx dotted = upTri.T().dot(test);
+
+            SVpath hestonPath = new SVpath(
+                ref dotted,
+                option.getS0(), option.getVar0(),
+                kappa, theta, sigma,
+                option.getRf(), option.getT() / pathLen);
+            return hestonPath.getVPath();
+        }
+
+        public double[][] drawSandVPath(Random rv)
+        {
+            double[,] corrData = { { 1, rho }, { rho, 1 } };
+            Mtrx testCorr = new Mtrx(2, 2, ref corrData);
+
+            Zmtrx test = new Zmtrx(2, 365, rv);
+            Mtrx upTri = testCorr.choleskyDecomp();
+            Mtrx dotted = upTri.T().dot(test);
+
+            SVpath hestonPath = new SVpath(
+                ref dotted,
+                option.getS0(), option.getVar0(),
+                kappa, theta, sigma,
+                option.getRf(), option.getT() / pathLen);
+            return hestonPath.getSandVPath();
+        }
+
         public double[] drawSt(int pathCnt, Random rv)
         {
             double[] StArr = new double[pathCnt];
@@ -99,49 +133,5 @@ namespace myWinApp
             return meanPrice(stArr, pathCnt);
         }
     }
-
-    /*
-    class Simulator 
-    {
-        private int pathCnt; private int pathLen;
-        private double s0; private double v0;
-        private double kappa; private double theta; private double sigma; private double rho;
-        private double rf; private double T; private double dt;
-
-        public Simulator()
-        {
-            pathCnt = 128 * 128;
-            pathLen = 365;
-            s0 = 101.52;
-            //k = 100.0;
-            rf = 0.001521;
-
-            v0 = 0.00770547621786487;
-            kappa = 2.20366282736578;
-            theta = 0.0164951784035976;
-            sigma = 0.33220849746904;
-            rho = -0.277814270110106;
-
-            dt = 1.0 / pathLen;
-        }
-
-        public void sim()
-        {
-            Random rv = new Random(1234);
-            for (int pathIdx = 0; pathIdx < pathCnt; pathIdx++)
-            {
-                #region draw z
-                double[,] z = new double[2, pathLen];
-
-                for (int timeIdx = 0; timeIdx < pathLen; timeIdx++)
-                {
-                    z[0, timeIdx] = DStat.N_Inv(rv.NextDouble());
-                    z[1, timeIdx] = DStat.N_Inv(rv.NextDouble());
-                }
-                #endregion
-            }
-        }
-    }
-    */
 
 }

@@ -262,5 +262,18 @@ namespace myWinApp
         {
             return sPath;
         }
+
+        public double[] getVPath()
+        {
+            return vPath;
+        }
+
+        public double[][] getSandVPath()
+        {
+            double[][] ans = new double[2][];
+            ans[0] = sPath;
+            ans[1] = vPath;
+            return ans;
+        }
     }
 }

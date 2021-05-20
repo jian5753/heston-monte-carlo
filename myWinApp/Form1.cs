@@ -15,6 +15,20 @@ namespace myWinApp
 {
     public partial class Form1 : Form
     {
+        private double s0;
+        private double k;
+        private double var0;
+        private double rf;
+        private double T;
+
+        private double rho;
+        private double kappa;
+        private double theta;
+        private double sigma;
+
+        private int seed;
+        private int pathCnt;
+
         static Matrix corrToCov(Matrix corrMtrx, double[] variance)
         {
 
@@ -33,26 +47,42 @@ namespace myWinApp
         public Form1()
         {
             InitializeComponent();
+            #region default parameters;
+            s0 = 101.52;
+            k = 100.0;
+            var0 = 0.00770547621786487;
+            rf = 0.001521;
+            T = 1.0;
+
+            rho = -0.9;
+            kappa = 1.5;
+            theta = 0.04;
+            sigma = 0.3;
+
+            seed = 1234;
+            pathCnt = 10000;
+            #endregion
+
+            #region chart
+
+            #region spath chart
+            chart_sPath.Series[0].Points.AddXY(0, 60);
+            chart_sPath.Series[0].Points.AddXY(365, 60);
+            chart_sPath.ChartAreas[0].AxisX.Maximum = 365.0;
+            #endregion
+
+            #region vpath chart
+            chart_vPath.Series[0].Points.AddXY(0, theta);
+            chart_vPath.Series[0].Points.AddXY(365, theta);
+            chart_vPath.ChartAreas[0].AxisY.Maximum = 0.08;
+            chart_vPath.ChartAreas[0].AxisX.Maximum = 365.0;
+            #endregion
+
+            #endregion
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            #region default parameters;
-            double s0 = 101.52;
-            double k = 100.0;
-            double var0 = 0.00770547621786487;
-            double rf = 0.001521;
-            double T = 1.0;
-
-            double rho = -0.9;
-            double kappa = 1.5;
-            double theta = 0.04;
-            double sigma = 0.3;
-
-            int seed = 1234;
-            int pathCnt = 10000;
-            #endregion
-
             #region parse input
             try { s0 = double.Parse(textBox_s0.Text); } catch { };
             try { k = double.Parse(textBox_k.Text); } catch { };
@@ -67,14 +97,16 @@ namespace myWinApp
 
             try { pathCnt = int.Parse(textBox_pathCnt.Text); } catch { };
             try { seed = int.Parse(textBox_seed.Text); } catch { seed = 0; };
+
+            int pathLen = (int)(365 * T);
             #endregion
 
             VanillaCall testCall = new VanillaCall(s0, var0, k, T, rf);
             VanillaPut testPut = new VanillaPut(s0, var0, k, T, rf);
             MonteCarloSimulation_hestonModel simForCall = 
-                new MonteCarloSimulation_hestonModel(testCall, rho, kappa, theta, sigma, 365 * T);
+                new MonteCarloSimulation_hestonModel(testCall, rho, kappa, theta, sigma, pathLen);
             MonteCarloSimulation_hestonModel simForPut =
-                new MonteCarloSimulation_hestonModel(testPut, rho, kappa, theta, sigma, 365 * T);
+                new MonteCarloSimulation_hestonModel(testPut, rho, kappa, theta, sigma, pathLen);
 
             Stopwatch SW = new Stopwatch();
             SW.Start();
@@ -99,6 +131,39 @@ namespace myWinApp
         private void clear_Click(object sender, EventArgs e)
         {
             msgBox.Text = "";
+        }
+
+        private void button_drawPath_Click(object sender, EventArgs e)
+        {
+            #region rv
+            Random rv = new Random();
+            //if (seed == 0) { rv = new Random(); }
+            //else { rv = new Random(seed); };
+            #endregion
+            chart_sPath.Series[0].Points.Clear();
+            chart_vPath.Series[0].Points.Clear();
+            int pathLen = (int) (365 * T);
+
+            #region draw path 
+            VanillaOption forPath = new VanillaOption(s0, var0, k, T, rf);
+            MonteCarloSimulation_hestonModel pathSim
+                = new MonteCarloSimulation_hestonModel(forPath, rho, kappa, theta, sigma, pathLen);
+            double[][] sAndvPath = pathSim.drawSandVPath(rv);
+            #endregion
+
+            for (int i = 0; i < pathLen; i++){
+                chart_sPath.Series[0].Points.AddY(sAndvPath[0][i]);
+                chart_vPath.Series[0].Points.AddY(sAndvPath[1][i]);
+            }
+            chart_sPath.ChartAreas[0].AxisY.Maximum = sAndvPath[0].Max() * 1.1;
+            chart_sPath.ChartAreas[0].AxisY.Minimum = sAndvPath[0].Min() * 0.9;
+            chart_vPath.ChartAreas[0].AxisY.Maximum = sAndvPath[1].Max() * 1.1;
+            chart_vPath.ChartAreas[0].AxisY.Minimum = sAndvPath[1].Min() * 0.9;
+
+            chart_sPath.ChartAreas[0].AxisX.Maximum = pathLen;
+            chart_vPath.ChartAreas[0].AxisX.Maximum = pathLen;
+
+
         }
     }
 }
