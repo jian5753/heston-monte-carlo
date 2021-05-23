@@ -13,7 +13,7 @@ using DFinNR;
 
 namespace myWinApp
 {
-    public partial class Form1 : Form
+    public partial class from1 : Form
     {
         private double s0;
         private double k;
@@ -44,7 +44,7 @@ namespace myWinApp
             return covMtrx;
         }
 
-        public Form1()
+        public from1()
         {
             InitializeComponent();
             #region default parameters;
