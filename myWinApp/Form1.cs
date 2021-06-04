@@ -15,6 +15,7 @@ namespace myWinApp
 {
     public partial class from1 : Form
     {
+        #region attributes
         private double s0;
         private double k;
         private double var0;
@@ -28,6 +29,7 @@ namespace myWinApp
 
         private int seed;
         private int pathCnt;
+        #endregion
 
         static Matrix corrToCov(Matrix corrMtrx, double[] variance)
         {

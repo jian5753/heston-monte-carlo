@@ -1,0 +1,13 @@
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\MT_hestonSim\bin\Debug\MT_hestonSim.exe.config
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\MT_hestonSim\obj\Debug\MT_hestonSim.csprojResolveAssemblyReference.cache
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\MT_hestonSim\obj\Debug\MT_hestonSim.MT_hestonSim_form.resources
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\MT_hestonSim\obj\Debug\MT_hestonSim.Properties.Resources.resources
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\MT_hestonSim\obj\Debug\MT_hestonSim.csproj.GenerateResource.Cache
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\MT_hestonSim\bin\Debug\MT_hestonSim.exe
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\MT_hestonSim\bin\Debug\MT_hestonSim.pdb
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\MT_hestonSim\bin\Debug\FinNRCSLib.dll
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\MT_hestonSim\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\MT_hestonSim\bin\Debug\FinNRCSLib.pdb
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\MT_hestonSim\bin\Debug\zh-Hant\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\MT_hestonSim\obj\Debug\MT_hestonSim.exe
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\MT_hestonSim\obj\Debug\MT_hestonSim.pdb

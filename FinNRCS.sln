@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinNRCSLib", "FinNRCSLib\Fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myWinApp", "myWinApp\myWinApp.csproj", "{001D2042-4A13-481D-BCD8-A5EB3EFF2A86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MT_hestonSim", "MT_hestonSim\MT_hestonSim.csproj", "{52D2AEEE-1931-48DC-B595-46C2EA2D13CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parrallelTest", "parrallelTest\parrallelTest.csproj", "{2A7720B5-A78C-4DF9-9C64-FDAF5ECFD540}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{001D2042-4A13-481D-BCD8-A5EB3EFF2A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{001D2042-4A13-481D-BCD8-A5EB3EFF2A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{001D2042-4A13-481D-BCD8-A5EB3EFF2A86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52D2AEEE-1931-48DC-B595-46C2EA2D13CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52D2AEEE-1931-48DC-B595-46C2EA2D13CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52D2AEEE-1931-48DC-B595-46C2EA2D13CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52D2AEEE-1931-48DC-B595-46C2EA2D13CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A7720B5-A78C-4DF9-9C64-FDAF5ECFD540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A7720B5-A78C-4DF9-9C64-FDAF5ECFD540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A7720B5-A78C-4DF9-9C64-FDAF5ECFD540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A7720B5-A78C-4DF9-9C64-FDAF5ECFD540}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

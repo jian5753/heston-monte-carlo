@@ -8,3 +8,8 @@ C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRC
 C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\FinNRCSLib\obj\Release\FinNRCSLib.csprojResolveAssemblyReference.cache
 C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\FinNRCSLib\obj\Release\FinNRCSLib.dll
 C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\FinNRCS\FinNRCSLib\obj\Release\FinNRCSLib.pdb
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\FinNRCSLib\bin\Release\FinNRCSLib.dll
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\FinNRCSLib\bin\Release\FinNRCSLib.pdb
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\FinNRCSLib\obj\Release\FinNRCSLib.csprojResolveAssemblyReference.cache
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\FinNRCSLib\obj\Release\FinNRCSLib.dll
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\FinNRCSLib\obj\Release\FinNRCSLib.pdb

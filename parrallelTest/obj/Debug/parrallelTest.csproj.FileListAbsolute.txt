@@ -1,0 +1,8 @@
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\parrallelTest\bin\Debug\parrallelTest.exe.config
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\parrallelTest\bin\Debug\parrallelTest.exe
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\parrallelTest\bin\Debug\parrallelTest.pdb
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\parrallelTest\obj\Debug\parrallelTest.csprojResolveAssemblyReference.cache
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\parrallelTest\obj\Debug\parrallelTest.exe
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\parrallelTest\obj\Debug\parrallelTest.pdb
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\parrallelTest\bin\Debug\FinNRCSLib.dll
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\parrallelTest\bin\Debug\FinNRCSLib.pdb
