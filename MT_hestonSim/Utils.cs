@@ -259,8 +259,8 @@ namespace MT_hestonSim
                 Parallel.For(0, rowCnt, rowIdx =>
                 {
                     //&data;
-                    double temp = DStat.N_Inv(rv.NextDouble());
-                    data[rowIdx, colIdx] = temp;
+                        double temp = DStat.N_Inv(rv.NextDouble());
+                        data[rowIdx, colIdx] = temp;
                     //Thread.Sleep(1);
                 });
             });

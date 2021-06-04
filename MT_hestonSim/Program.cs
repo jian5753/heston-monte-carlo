@@ -16,7 +16,8 @@ namespace MT_hestonSim
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MT_hestonSim_form());
+            //Application.Run(new MT_hestonSim_form());
+            Application.Run(new HestonSimuoationForm());
         }
     }
 }
