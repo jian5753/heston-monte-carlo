@@ -174,6 +174,7 @@ namespace MT_hestonSim
             this.simulationPara.TabIndex = 12;
             this.simulationPara.TabStop = false;
             this.simulationPara.Text = "simulation parameter";
+            this.simulationPara.Enter += new System.EventHandler(this.simulationPara_Enter);
             // 
             // textBox_seed
             // 
@@ -523,13 +524,13 @@ namespace MT_hestonSim
             this.button_drawPath.UseVisualStyleBackColor = true;
             this.button_drawPath.Click += new System.EventHandler(this.button_drawPath_Click);
             // 
-            // from1
+            // HestonSimuoationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1378, 789);
             this.Controls.Add(this.Simulation);
-            this.Name = "from1";
+            this.Name = "HestonSimuoationForm";
             this.Text = "heston model montecarlo simulation";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Simulation.ResumeLayout(false);

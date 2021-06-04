@@ -43,7 +43,7 @@ namespace MT_hestonSim
             Parallel.For(0, colCnt, colIdx =>
            {
                ans[colIdx] = data[rowIdx, colIdx];
-               Thread.Sleep(1);
+               //Thread.Sleep(1);
            });
 
             return ans;
@@ -82,6 +82,7 @@ namespace MT_hestonSim
         public Mtrx dot(Mtrx rightMtrx)
         {
             Mtrx ans = new Mtrx(this.rowCnt, rightMtrx.getColCnt());
+            /*
             Parallel.For(0, rowCnt, rowIdx =>
             {
                 Parallel.For(0, colCnt, colIdx =>
@@ -96,7 +97,9 @@ namespace MT_hestonSim
                     });
                 });
             });
-            /*
+            */
+            
+
             for (int rowIdx = 0; rowIdx < rowCnt; rowIdx++)
             {
                 for (int colIdx = 0; colIdx < rightMtrx.getColCnt(); colIdx++)
@@ -110,7 +113,7 @@ namespace MT_hestonSim
                     }
                 }
             }
-            */
+            
             return ans;
             
         }
@@ -312,26 +315,27 @@ namespace MT_hestonSim
         private int length;
         private double[] vPath;
         private double[] sPath;
-        private double deltat;
+        private double T;
         public SVpath(ref Mtrx source,
             double s0, double v0,
             double kappa, double theta, double sigma,
-            double rf,
-            double deltat)
+            double rf, double T
+        )
         {
             this.length = source.getColCnt();
-            double sqrtdt = Math.Sqrt(deltat);
+            this.T = T;
+            double deltaT = T / this.length;
+            double sqrtdt = Math.Sqrt(deltaT);
             vPath = new double[this.length + 1];
             sPath = new double[this.length + 1];
-            this.deltat = deltat;
 
             vPath[0] = v0;
             sPath[0] = s0;
 
             for (int t = 0; t < this.length; t++)
             {
-                sPath[t + 1] = sPath[t] * Math.Exp((rf - 0.5 * vPath[t]) * deltat + Math.Sqrt(vPath[t]) * sqrtdt * source[0, t]);
-                vPath[t + 1] = Math.Max(vPath[t] + kappa * (theta - vPath[t]) * deltat + sigma * Math.Sqrt(vPath[t]) * sqrtdt * source[1, t], 0);
+                sPath[t + 1] = sPath[t] * Math.Exp((rf - 0.5 * vPath[t]) * deltaT + Math.Sqrt(vPath[t]) * sqrtdt * source[0, t]);
+                vPath[t + 1] = Math.Max(vPath[t] + kappa * (theta - vPath[t]) * deltaT + sigma * Math.Sqrt(vPath[t]) * sqrtdt * source[1, t], 0);
             }
         }
 

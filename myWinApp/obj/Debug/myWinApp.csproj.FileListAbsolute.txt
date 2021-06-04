@@ -30,9 +30,11 @@ C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中
 C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\myWinApp\bin\Debug\heston-monteCarloSim.pdb
 C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\myWinApp\bin\Debug\FinNRCSLib.dll
 C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\myWinApp\bin\Debug\FinNRCSLib.pdb
-C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\myWinApp\obj\Debug\myWinApp.csprojResolveAssemblyReference.cache
 C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\myWinApp\obj\Debug\myWinApp.from1.resources
 C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\myWinApp\obj\Debug\myWinApp.Properties.Resources.resources
 C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\myWinApp\obj\Debug\myWinApp.csproj.GenerateResource.Cache
 C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\myWinApp\obj\Debug\heston-monteCarloSim.exe.manifest
 C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\myWinApp\obj\Debug\heston-monteCarloSim.application
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\myWinApp\obj\Debug\myWinApp.csproj.AssemblyReference.cache
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\myWinApp\obj\Debug\myWinApp.csproj.CoreCompileInputs.cache
+C:\Users\jian5\OneDrive\桌面\courses\2021spring\finAlgorithm\myExercise\期中專案_黃冠綸\myWinApp\obj\Debug\myWinApp.csproj.CopyComplete

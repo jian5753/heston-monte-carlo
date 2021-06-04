@@ -46,7 +46,7 @@ namespace MT_hestonSim
             double[,] corrData = { { 1, rho }, { rho, 1 } };
             Mtrx testCorr = new Mtrx(2, 2, ref corrData);
 
-            Zmtrx test = new Zmtrx(2, 365, rv);
+            Zmtrx test = new Zmtrx(2, pathLen, rv);
             Mtrx upTri = testCorr.choleskyDecomp();
             Mtrx dotted = upTri.T().dot(test);
 
@@ -64,7 +64,7 @@ namespace MT_hestonSim
             double[,] corrData = { { 1, rho }, { rho, 1 } };
             Mtrx testCorr = new Mtrx(2, 2, ref corrData);
 
-            Zmtrx test = new Zmtrx(2, 365, rv);
+            Zmtrx test = new Zmtrx(2, pathLen, rv);
             Mtrx upTri = testCorr.choleskyDecomp();
             Mtrx dotted = upTri.T().dot(test);
 
@@ -81,7 +81,7 @@ namespace MT_hestonSim
             double[,] corrData = { { 1, rho }, { rho, 1 } };
             Mtrx testCorr = new Mtrx(2, 2, ref corrData);
 
-            Zmtrx test = new Zmtrx(2, 365, rv);
+            Zmtrx test = new Zmtrx(2, pathLen, rv);
             Mtrx upTri = testCorr.choleskyDecomp();
             Mtrx dotted = upTri.T().dot(test);
 
@@ -89,7 +89,7 @@ namespace MT_hestonSim
                 ref dotted,
                 option.getS0(), option.getVar0(),
                 kappa, theta, sigma,
-                option.getRf(), option.getT() / pathLen);
+                option.getRf(), option.getT());
             return hestonPath.getSandVPath();
         }
 

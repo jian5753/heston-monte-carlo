@@ -144,7 +144,24 @@ namespace MT_hestonSim
             #endregion
             chart_sPath.Series[0].Points.Clear();
             chart_vPath.Series[0].Points.Clear();
-            int pathLen = (int) (365 * T);
+
+            #region parse input
+            try { s0 = double.Parse(textBox_s0.Text); } catch { };
+            try { k = double.Parse(textBox_k.Text); } catch { };
+            try { var0 = double.Parse(textBox_var0.Text); } catch { };
+            try { T = double.Parse(textBox_T.Text); } catch { };
+            try { rf = double.Parse(textBox_rf.Text); } catch { };
+
+            try { rho = double.Parse(textBox_rho.Text); } catch { };
+            try { kappa = double.Parse(textBox_kappa.Text); } catch { };
+            try { theta = double.Parse(textBox_theta.Text); } catch { };
+            try { sigma = double.Parse(textBox_sigma.Text); } catch { };
+
+            try { pathCnt = int.Parse(textBox_pathCnt.Text); } catch { };
+            try { seed = int.Parse(textBox_seed.Text); } catch { seed = 0; };
+
+            int pathLen = (int)(365 * T);
+            #endregion
 
             #region draw path 
             VanillaOption forPath = new VanillaOption(s0, var0, k, T, rf);
@@ -165,6 +182,11 @@ namespace MT_hestonSim
             chart_sPath.ChartAreas[0].AxisX.Maximum = pathLen;
             chart_vPath.ChartAreas[0].AxisX.Maximum = pathLen;
 
+
+        }
+
+        private void simulationPara_Enter(object sender, EventArgs e)
+        {
 
         }
     }
